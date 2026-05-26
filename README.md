@@ -373,9 +373,9 @@ El proyecto cuenta con:
 
 ---
 
-## Autor
+## Autores
 
-**Jose Felipe Wagner Penagos**
+**Grupo WebDev**
 
 Proyecto académico de gestión de infraestructura tecnológica hospitalaria.
 
