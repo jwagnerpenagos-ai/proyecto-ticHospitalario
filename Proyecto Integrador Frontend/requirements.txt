@@ -7,3 +7,4 @@ autoprefixer
 vite
 react
 react-dom
+recharts
