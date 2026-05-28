@@ -64,6 +64,15 @@ Cada servicio tiene una responsabilidad específica y se comunica a través de u
 El backend utiliza PostgreSQL como base de datos y Docker Compose para levantar todos los servicios de forma unificada.
 
 ---
+## Funcionamiento
+<img width="2129" height="915" alt="Screenshot from 2026-05-27 22-10-24" src="https://github.com/user-attachments/assets/e2dc0b56-5886-46b1-9fce-1713c561584d" />
+<img width="2129" height="915" alt="Screenshot from 2026-05-27 22-10-34" src="https://github.com/user-attachments/assets/57895a21-5976-4b89-8f34-4dc5ec0b6bd7" />
+<img width="2129" height="915" alt="Screenshot from 2026-05-27 22-10-44" src="https://github.com/user-attachments/assets/d92448e5-805b-4ceb-a5c3-590318514f10" />
+<img width="2129" height="915" alt="Screenshot from 2026-05-27 22-08-47" src="https://github.com/user-attachments/assets/9b3db2f8-f286-43ab-91e5-438c87fc5b65" />
+<img width="2129" height="915" alt="Screenshot from 2026-05-27 22-20-38" src="https://github.com/user-attachments/assets/e749a94c-6ac9-4428-9b8e-df2338c765b2" />
+<img width="2129" height="915" alt="Screenshot from 2026-05-27 22-09-51" src="https://github.com/user-attachments/assets/c099a148-a489-4b41-9ebf-179d81fbef52" />
+<img width="1895" height="901" alt="image" src="https://github.com/user-attachments/assets/4a1a343a-02b2-45dc-b15d-e3ac09966f20" />
+<img width="1880" height="895" alt="image" src="https://github.com/user-attachments/assets/f07a36d2-2468-4f29-b09c-3711a1999dd5" />
 
 ## Tecnologías utilizadas
 
