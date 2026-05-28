@@ -73,6 +73,8 @@ El backend utiliza PostgreSQL como base de datos y Docker Compose para levantar 
 <img width="2129" height="915" alt="Screenshot from 2026-05-27 22-09-51" src="https://github.com/user-attachments/assets/c099a148-a489-4b41-9ebf-179d81fbef52" />
 <img width="1895" height="901" alt="image" src="https://github.com/user-attachments/assets/4a1a343a-02b2-45dc-b15d-e3ac09966f20" />
 <img width="1880" height="895" alt="image" src="https://github.com/user-attachments/assets/f07a36d2-2468-4f29-b09c-3711a1999dd5" />
+<img width="1887" height="906" alt="image" src="https://github.com/user-attachments/assets/1381693f-86a3-44ea-89b7-c9b1aebdd2e4" />
+
 
 ## Tecnologías utilizadas
 
