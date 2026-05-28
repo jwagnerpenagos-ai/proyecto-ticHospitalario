@@ -2,6 +2,7 @@ services:
   db:
     image: postgres:16
     container_name: it_monitoring_db
+    restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 12345
@@ -10,70 +11,88 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d it_monitoring_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   interested-service:
     build: .
     working_dir: /app/interested_service
+    restart: always
     ports:
       - "5001:5001"
     environment:
       DATABASE_URL: postgresql+psycopg2://postgres:12345@db:5432/it_monitoring_db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   device-service:
     build: .
     working_dir: /app/device_service
+    restart: always
     ports:
       - "5002:5002"
     environment:
       DATABASE_URL: postgresql+psycopg2://postgres:12345@db:5432/it_monitoring_db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   auth-service:
     build: .
     working_dir: /app/auth_service
+    restart: always
     ports:
       - "5003:5003"
     environment:
       DATABASE_URL: postgresql+psycopg2://postgres:12345@db:5432/it_monitoring_db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   location-service:
     build: .
     working_dir: /app/location_service
+    restart: always
     ports:
       - "5004:5004"
     environment:
       DATABASE_URL: postgresql+psycopg2://postgres:12345@db:5432/it_monitoring_db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   metrics-service:
     build: .
     working_dir: /app/metrics_service
+    restart: always
     ports:
       - "5005:5005"
     environment:
       DATABASE_URL: postgresql+psycopg2://postgres:12345@db:5432/it_monitoring_db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   alerts-service:
     build: .
     working_dir: /app/alerts_service
+    restart: always
     ports:
       - "5006:5006"
     environment:
       DATABASE_URL: postgresql+psycopg2://postgres:12345@db:5432/it_monitoring_db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   gateway:
     build: .
     working_dir: /app/gateway
+    restart: always
     ports:
       - "5000:5000"
     environment:
